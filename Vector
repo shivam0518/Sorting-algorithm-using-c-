@@ -1,0 +1,23 @@
+#include<iostream>
+#include<cmath>
+#include <vector>
+using namespace std;
+
+int main (){
+    int i = 0;
+    int n = 0;
+    cout << "Enter -1 to exit \n";
+    vector <int> data;
+    while(true){
+        cout <<"Element " << i << " ";
+        cin >> n;
+        if (n == -1){
+            break;
+        }
+        data.push_back(n);
+        i++;
+    }
+    for (auto elem: data){
+        cout << elem << " ";
+    }
+}
