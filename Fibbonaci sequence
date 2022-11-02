@@ -1,0 +1,23 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+
+
+int main (){
+   int num1 = 0, num2 = 1, n = 0;
+   cout << "Enter the numb greater than or equal to 3: ";
+   cin >> n;
+   int nextNum = 0;
+
+   cout << num1 << ", " << num2 << ", ";
+    for (int i = 3; i <= n; i++){
+        nextNum = num1 + num2;
+        cout << nextNum;
+        if (i != n){
+            cout << ", ";
+        }
+        num1 = num2;
+        num2 = nextNum;
+    }
+}
