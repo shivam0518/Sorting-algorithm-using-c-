@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cmath>
+#include <vector>
+using namespace std;
+
+int main (){
+   string text;
+   char ch;
+   cout << "Enter the string: ";
+   getline(cin, text);
+   cout << "Enter the character: ";
+   cin >> ch;
+
+   int occurance = 0;
+
+   for (int i = 0; i < text.length(); i++){
+    if (text[i] == ch){
+        occurance++;
+    }
+   }
+   cout << occurance;
+}
