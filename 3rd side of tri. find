@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(){
+    float a1, a2, a3;
+    cout << "Enter the value of a1 and a2: ";
+    cin >> a1 >> a2;
+
+    a3 = 180 - a1 - a2;
+
+    if ((a1 > 0 && a1 < 180) && (a2 > 0 && a2 < 180) && (a1 + a2 < 180)){
+        cout << a3 << " a3\n";
+    }
+    else {
+        cout << "Invalid a1/a2\nEnter the correct angles";
+    }
+}
