@@ -1,0 +1,16 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    string text;
+    char ch;
+    cout << "Enter the string: ";
+    getline(cin, text);
+    cout << "Enter the character: ";
+    cin >> ch;
+
+    long occurances;
+    occurances = count(text.begin(), text.end(), ch);
+    cout << occurances << " occurances\n";
+}
