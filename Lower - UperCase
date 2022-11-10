@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+int main(){
+    string input, input1;
+    cout << "Enter input and input1: ";
+    cin >> input >> input1;
+
+    transform(input.begin(), input.end(), input.begin(), ::toupper);
+    transform(input1.begin(), input1.end(), input1.begin(), ::tolower);
+    cout << "convert input to upperCase and input1 to lowerCase: ";
+    cout << input << " " << input1;
+}
