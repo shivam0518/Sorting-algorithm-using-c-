@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+int main(){
+    string name;
+    char name1[100];
+
+    cout << "Enter your full name: ";
+    getline(cin, name);
+
+    cout << "Hello " << name << "!\n";
+
+    cout << "Enter your full name1: ";
+    cin.getline(name1, sizeof(name1));
+    cout << "Hello " << name1 << "!\n";
+}
