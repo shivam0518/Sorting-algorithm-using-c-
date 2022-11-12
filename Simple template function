@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+
+template <typename T, typename U>
+
+auto sum(T a, U b, T c){
+   return a + b + c;
+}
+
+int main(){
+     cout << "Sum: " << sum(1, 2.4, 3);
+}
