@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string.h>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+
+
+int main(){
+      double a, b;
+      cout << "Finding the max and min no: " << "\n";
+      cout << "Finding the pow of x^y: " << "\n";
+      cout << "Finding the square root of the no: \n";
+      cout << "Round function: \n";
+      cout << "Ciel and floor function: \n";
+      cout << "Enter the first no: ";
+      cin >> a;
+      cout << "Enter the second no: ";
+      cin >> b;
+      double Pow = pow(a, b);
+      int Max = max(a, b);
+      int Min = min(a, b);
+      double sq = sqrt(64);
+      double r = round(a);
+      double f = floor(a);
+      double c = ceil(b);
+      cout << "Floor: " << f << " Ciel: " << c << "\n";
+      cout << "Round no: " << r << "\n";
+      cout << "Pow of No: " << Pow << "\n";
+      cout << "Max No: " << Max << " Min No: " << Min << "\n";
+      cout << "Square root: " << sq << "\n";
+
+
+}
