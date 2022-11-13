@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string.h>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int pallindrome(string n, int i, int e){
+     if (i == e){
+        return 1;
+     }
+     else if (n[i] != n[e]){
+        return 0;
+     }
+     else if (i < e){
+        i++;
+        e--;
+        return pallindrome(n, i, e);
+     }
+     return 1;
+
+}
+
+
+int main(){
+
+    string n;
+    cin >> n;
+    int s = n.size() - 1;
+
+    if (pallindrome(n, 0, s) == 1){
+        cout << "String is pallindrome \n";
+    }
+    else {
+        cout << "String is not pallindrome\n";
+    }
+}
