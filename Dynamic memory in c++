@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+
+
+
+int main(){
+      string *name = NULL;
+      int size;
+      cin >> size;
+      name = new string[size];
+      for (int i = 0; i < size; i++){
+        cout << "name #" << i << " : ";
+        cin >> name[i];
+      }
+      for (int i = 0; i < size; i++){
+        cout << name[i] << " ";
+      }
+      delete[] name;
+}
