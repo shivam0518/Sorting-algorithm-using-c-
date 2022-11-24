@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int result(vector <vector<int>>&v){
+    int maxNo = INT_MIN;
+    int rowNo = -1;
+    int coloum = v[0].size();
+
+    for (int i = 0; i < v.size(); i++){
+        for (int j = 0; j < v[i].size(); j++){
+            if (v[i][j] == 1){
+                int noOfOnes = coloum - j;
+                if (noOfOnes > maxNo){
+                    maxNo = noOfOnes;
+                    rowNo = i;
+                }
+                break;
+            }
+        }
+    }
+    return rowNo;
+}
+
+int main(){
+     int n, m;
+     cin >> n >> m;
+     vector <vector<int>> vec(n, vector<int> (m));
+
+     for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+            cin >> vec[i][j];
+        }
+     }
+     int ans = result(vec);
+     cout << ans;
+}
