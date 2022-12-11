@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef long double ld;
+#define PB push_back;
+#define POB pop_back;
+
+int Partition(int arr[], int start, int last);
+void quickSort(int arr[], int start, int last);
+
+int main(){
+    int n;
+    cout << "Enter the size of the array: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter the " << n << " no of elements: ";
+    for (int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
+    cout << "\n\nBefore Sorting: \n\n";
+    for (int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+    quickSort(arr, 0, n - 1);
+    cout << "\n----------------------\n";
+    cout << "\n\nAfter Sorting: \n\n";
+    for (int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+}
+
+int Partition(int arr[], int start, int last){
+    int pivot = arr[last];
+    int pIndex = start;
+    for (int i = start; i < last; i++){
+        if (arr[i] < pivot){
+            int temp = arr[i];
+            arr[i] = arr[pIndex];
+            arr[pIndex] = temp;
+            pIndex++;
+        }
+    }
+    int temp = arr[last];
+    arr[last] = arr[pIndex];
+    arr[pIndex] = temp;
+
+    return pIndex;
+}
+
+void quickSort(int arr[], int start, int last){
+      if (start < last){
+         int p = Partition(arr, start, last);
+         quickSort(arr, start, (p - 1)); // left partition
+         quickSort(arr, (p + 1), last); // right partition
+          }
+}
