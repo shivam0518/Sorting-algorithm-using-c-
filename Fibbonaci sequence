@@ -1,23 +1,36 @@
-#include<iostream>
-#include<cmath>
+#include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
+typedef long double ld;
+#define PB push_back;
+#define POB pop_back;
 
-
-
-int main (){
-   int num1 = 0, num2 = 1, n = 0;
-   cout << "Enter the numb greater than or equal to 3: ";
-   cin >> n;
-   int nextNum = 0;
-
-   cout << num1 << ", " << num2 << ", ";
-    for (int i = 3; i <= n; i++){
-        nextNum = num1 + num2;
-        cout << nextNum;
-        if (i != n){
-            cout << ", ";
-        }
-        num1 = num2;
-        num2 = nextNum;
+int recursive_Fib(int n){
+    if (n <= 1){
+        return 1;
     }
+    return recursive_Fib(n - 1) + recursive_Fib(n - 2);
+}
+
+int iterative_Fib(int n){
+    int a, b, c;
+    a = 0;
+    b = 1;
+    for (int i = 1; i <= n; i++){
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return c;
+}
+
+int main(){
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    int result1 = iterative_Fib(n);
+    int result2 = recursive_Fib(n);
+    cout << "Result using Recursion: " << result2 << "\n";
+    cout << "Result using iterative: " << result1 << "\n";
+
 }
