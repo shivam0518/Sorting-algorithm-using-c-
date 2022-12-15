@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+#include <ctime>
+using namespace std;
+typedef long long ll;
+typedef long double ld;
+#define PB push_back;
+#define POB pop_back;
+
+void increment(int arr[], int n, int s){
+     for (int i = 0; i < n; i++){
+        arr[i] = *(arr + i) + s;
+     }
+}
+
+int main(){
+   cout << "Enter the no of elements you want to store: ";
+   int n;
+   cin >> n;
+   int arr[n];
+   int *p = arr;
+
+   cout << "Enter the " << n << " elements: ";
+   for (int i = 0; i < n; i++){
+      cin >> *(p + i);
+   }
+
+   cout << "\n\nAddress printed: \n";
+   for (int i = 0; i < n; i++){
+       cout << p + i << "\t";
+   }
+
+   cout << "\n\nValue printed: \n";
+   for (int i = 0; i < n; i++){
+       cout << *(p + i) << "\t";
+   }
+   int in;
+   cout << "\n\nEnter the value which you want to increment in array: ";
+   cin >> in;
+
+   cout << "\nAfter increment: \n\n";
+   increment(arr, n, in);
+   for (int i = 0; i < n; i++){
+       cout << *(arr + i) << "\t";
+   }
+
+}
